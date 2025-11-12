@@ -1,0 +1,127 @@
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f7fff7;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 50px;
+  background-color: #333;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: #28a745;
+}
+
+/* ✅ Direct FaBars icon */
+.hamburger {
+  color: white;
+  cursor: pointer;
+  font-size: 30px;
+  transition: color 0.3s ease;
+}
+
+.hamburger:hover {
+  color: #28a745;
+}
+
+/* Hero content */
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  padding: 40px 60px;
+}
+
+/* Left section */
+.left-section {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.left-section h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.left-section p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.see-plans {
+  background-color: #28a745;
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.see-plans:hover {
+  background-color: #218838;
+}
+
+.stats {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #666;
+}
+
+/* Right section */
+.right-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.meal-image {
+  width: 100%;
+  max-width: 450px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.6s ease-in-out;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left-section {
+    padding-right: 0;
+  }
+
+  .meal-image {
+    margin-top: 30px;
+    height: 300px;
+  }
+
+  /* Keep icon visible on mobile */
+  .hamburger {
+    position: absolute;
+    right: 30px;
+    top: 25px;
+  }
+}
